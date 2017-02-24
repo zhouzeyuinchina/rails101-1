@@ -5,8 +5,15 @@ Rails.application.routes.draw do
       post :join
       post :quit
     end
-    
+
     resources :posts
   end
+
+  namespace :account do
+    resources :groups
+ end
+
+   # For details on the DSL available within this
+
   root 'groups#index'
 end
